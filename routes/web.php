@@ -22,7 +22,7 @@ Route::middleware([
 
 });
 
-Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Auth::routes();
 
