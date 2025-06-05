@@ -13,10 +13,10 @@ Route::get('/user', function (Request $request) {
 Route::post('/auth/login', [APIController::class, 'login'])->name('auth.login');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/auth/logout', [APIController::class, 'logout'])->name('logout');
+    Route::post('/auth/logout', [APIController::class, 'logout'])->name('auth.logout');
 
     // Products
-    Route::get('/products', [APIController::class, 'getProducts'])->name('products.index');
-    Route::get('/products/{id}', [APIController::class, 'getProduct'])->name('products.show');
-    Route::post('/products/add', [APIController::class, 'createProduct'])->name('products.store');
+    Route::get('/products', [APIController::class, 'getProducts'])->name('api.products.index');
+    Route::get('/products/{id}', [APIController::class, 'getProduct'])->name('api.products.show');
+    Route::post('/products/add', [APIController::class, 'createProduct'])->name('api.products.store');
 });
