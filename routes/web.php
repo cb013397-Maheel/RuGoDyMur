@@ -22,6 +22,8 @@ Route::middleware([
 
 });
 
+Route::post('/login', [LoginController::class, 'login']);
+
 Auth::routes();
 
 Route::middleware(['auth', 'user-access:user'])->group(function () {
