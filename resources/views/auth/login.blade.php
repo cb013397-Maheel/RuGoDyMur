@@ -13,7 +13,7 @@
             </div>
             @endsession
 
-            <form method="POST" action="{{ url('/login') }}" class="bg-black text-yellow-500 p-6 rounded-lg shadow-lg">
+            <form method="POST" action="{{ route('login') }}" class="bg-black text-yellow-500 p-6 rounded-lg shadow-lg">
                 @csrf
 
                 <div>
