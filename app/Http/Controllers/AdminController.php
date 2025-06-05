@@ -66,7 +66,7 @@ class AdminController extends Controller
     public function orderindex()
     {
         $orders = Order::with('user')->get();
-        return view('admin.order.index', compact('orders'));
+        return view('admin.Order.index', compact('orders'));
 
     }
 
