@@ -57,7 +57,7 @@ class OrderController extends Controller
         // Get all orders for the authenticated user
         $orders = Order::where('user_id', auth()->id())->with('orderItems.product')->get();
 
-        return view('customer.order.index', compact('orders'));
+        return view('customer.Order.index', compact('orders'));
     }
 
     public function updateStatus(Request $request, $id)
